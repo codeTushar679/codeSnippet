@@ -15,7 +15,7 @@ A microservices architecture-based platform for sharing, saving, and commenting 
 - Local Storage: All data persists in browser (no backend required)
 ## Demo
 
-Here's a live project link of Vercel:
+With the help of Vercel and Render, Here's live project link:
 
 link
 ## Tech Stack
@@ -27,7 +27,7 @@ Dependencies -> Express.js, axios, cors, nodemon
 
 ## Installation
 
-Install my-project in your code editor:
+Install the project:
 
 ```bash
   git clone https://github.com/codeTushar679/codeSnippet
