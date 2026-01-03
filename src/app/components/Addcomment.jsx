@@ -9,8 +9,9 @@ function Addcomment({ snippet }) {
     e.preventDefault();
     console.log("Comment added:", text);
     try {
+      const API_URL = process.env.NEXT_PUBLIC_COMMENT_API || "http://localhost:8001";
       const res = await axios.post(
-        `http://localhost:8001/api/v1/snippet/${snippet.id}/comment`,
+        `${API_URL}/api/v1/snippet/${snippet.id}/comment`,
         { text }
       );
       console.log(res.data);
@@ -23,7 +24,7 @@ function Addcomment({ snippet }) {
 
   return (
     <div>
-        <h1 className="font-semibold text-center mt-2">Comments</h1>
+        <h1 className="font-semibold text-center mt-5">Comments</h1>
       {snippet.comments.map((com, index) => (
         <li key={index}>{com.content}</li>
       ))}
