@@ -61,9 +61,12 @@ function Formsnippet() {
         <button className="bg-black text-white h-10 w-20 rounded-md cursor-pointer">
           Add
         </button>
+        <p className="text-red-800">Refresh the page to see your snippets!</p>
+
       </form>
       
-      <div className="grid grid-cols-3 mt-10 pl-12">
+        <h1 className="text-center mt-10 font-medium text-4xl text-purple-900">List of Codes!</h1>
+      <div className="grid grid-cols-3 mt-1 pl-12">
       {
         Object.values(snippets).map((snippet) => (
           <div key={snippet.id} className="border-2 border-black m-5 p-3 rounded-md w-80">
