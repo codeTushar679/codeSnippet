@@ -6,7 +6,7 @@ import Addcomment from "./Addcomment";
 function Formsnippet() {
   const [title, setTitle] = useState("");
   const [code, setCode] = useState("");
-  const [snippets, setSnippet] = useState({});
+  const [snippets, setSnippet] = useState([]);
 
   const createSnippet = async (e) => {
     e.preventDefault();
