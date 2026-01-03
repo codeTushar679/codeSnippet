@@ -7,7 +7,7 @@ const PORT = 8000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ origin: ["http://localhost:3000", "https://codesnippetfrontend-qe8n.onrender.com"] }));
 
 app.post("/events", (req, res) => {
   console.log("Event Received", req.body.type);
