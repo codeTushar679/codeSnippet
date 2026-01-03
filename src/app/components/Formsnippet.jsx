@@ -12,7 +12,8 @@ function Formsnippet() {
     e.preventDefault();
     console.log("Snippet created");
     try {
-      const res = await axios.post("http://localhost:8000/api/v1/snippet", {
+      const API_URL = process.env.NEXT_PUBLIC_SNIPPET_CREATE_API || "http://localhost:8000";
+      const res = await axios.post(`${API_URL}/api/v1/snippet`, {
         title,
         code,
       });
@@ -25,7 +26,8 @@ function Formsnippet() {
   useEffect(() => {
     const fetchSnippets = async () => {
       try {
-        const res = await axios.get("http://localhost:8002/snippets");
+        const API_URL = process.env.NEXT_PUBLIC_SNIPPETS_API || "http://localhost:8002";
+        const res = await axios.get(`${API_URL}/snippets`);
         console.log(res.data);
         setSnippet(res.data);
       } catch (error) {
